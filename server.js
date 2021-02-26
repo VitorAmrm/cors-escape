@@ -8,7 +8,7 @@ const port = process.env.PORT || 2000;
 // use originWhitelist instead.
 const {parseEnvVarAsList} = require('./lib/helpers');
 const originBlacklist = parseEnvVarAsList(process.env.CORSESCAPE_BLACKLIST);
-const originWhitelist = parseEnvVarAsList(process.env.CORSESCAPE_WHITELIST);
+const originWhitelist = ['http://10.200.254.185:7771','http://192.168.1.1:7771','http://192.168.1.16:7771','http://192.168.1.1:8080','http://192.168.1.16:8080','http://localhost:8080']
 
 debug('Blacklisting origins: ' + originBlacklist);
 debug('Whitelisting origins: ' + originWhitelist);
